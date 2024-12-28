@@ -10,5 +10,5 @@ console.log(a);
 
 // eg 3
 console.log(a);
-let a=10;
+let a=11;
 console.log(a);
