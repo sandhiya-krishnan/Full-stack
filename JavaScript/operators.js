@@ -58,13 +58,13 @@ console.log(!a);
 console.log(!b); 
 
 //6. Bitwise operators
-a = 5; // 0101 in binary
-b = 3; // 0011 in binary
-console.log(a & b); // 1 (0101 & 0011 = 0001)
-console.log(a | b); // 7 (0101 | 0011 = 0111)
-console.log(a ^ b); // 6 (0101 ^ 0011 = 0110)
-console.log(a >> 1); // 2 (0101 >> 1 = 0010)
-console.log(a << 1); // 10 (0101 << 1 = 1010)
+a = 5; 
+b = 3; 
+console.log(a & b); 
+console.log(a | b); 
+console.log(a ^ b); 
+console.log(a >> 1); 
+console.log(a << 1); 
 
 //7. Teranary operator
 var a = 10;
