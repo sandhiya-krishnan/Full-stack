@@ -6,7 +6,7 @@ class ClassComp extends React.Component{
             <h1>Hello</h1>
             <h2>This is Sandhiya</h2>
             </div>
-        )
+        );
     }
 }
 export default ClassComp;
