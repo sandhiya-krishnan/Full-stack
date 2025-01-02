@@ -1,51 +1,60 @@
-import axios from "axios";
-import { useEffect, useState } from "react";
-var UseEffect = () => {
-  //   var [text, setText] = useState("kongu");
-  //   useEffect(()=>{
-  //     console.log(text);
-  //     setText("KEC");
-  //   },[text])
-  //   return (
-  // <section>
-  //   <h1>use effect example</h1>
-  //   <input
-  //     type="text"
-  //     placeholder="Enter your text"
-  //     value={text}
-  //     onChange={(e) => setText(e.target.value)}
-  //   />
-  //   <h2>Text Typed is {text}</h2>
-  // </section>
-  //   );
-  // var [post, setPost] = useState([]);
-  var [img,setImg]=useState([]);
-  // useEffect(() => {
-  //   axios
-  //     .get("https://jsonplaceholder.typicode.com/posts")
-  //     .then((res) => {console.log(res.data)
-  //      setPost(res.data)})
-  //     .catch((err) => {console.log(err)});
-  // },[]);
-   useEffect(()=>{
-  axios.get("https://dummyjson.com/users").then((ans)=>{console.log(ans.data.users)
-    setImg(ans.data.users)
-  }).catch((err)=>{
-    console.log(err)
-  });
-   },[])
-  return (
-    <section>
-      <h1>Fetching Images  from Json placeholder api</h1>
-      <h2>Images are </h2>
-      {/* <ol>
-       {post.map((data)=>(<li key={data.id}>{data.title}</li>))
-       }
-      </ol> */}
-      <ol>
-        {img.map((users)=>(<li key={users.firstName}>{users.image}</li>))}
-      </ol>
-    </section>
-  );
+
+import React, { useState, useEffect } from 'react';
+import axios from 'axios';
+
+const UseEffect = () => {
+    const [img, setImg] = useState([]);
+
+    useEffect(() => {
+        axios.get("https://dummyjson.com/users")
+            .then((response) => {
+                console.log(response.data.users);
+                setImg(response.data.users);
+            })
+            .catch((error) => {
+                console.log(error);
+            });
+    }, []);
+
+    return (
+        <section>
+            <h1>Fetching Images from Dummy JSON API</h1>
+            <h2>Images:</h2>
+            <ol>
+                {img.map((user) => (
+                    <li key={user.id}>
+                        <p>{user.firstName}</p>
+                        <img src={user.image} alt={user.firstName} width="100" />
+                    </li>
+                ))}
+            </ol>
+        </section>
+    );
 };
+
 export default UseEffect;
+
+/*import React, { useState, useEffect } from 'react';
+
+const UseEffectExample = () => {
+    const [text, setText] = useState("Kongu");
+
+    useEffect(() => {
+        setText("KEC");
+    }, [text]);
+
+    return (
+        <section>
+            <h1>UseEffect Example</h1>
+            <input
+                type="text"
+                placeholder="Enter your text"
+                value={text}
+                onChange={(e) => setText(e.target.value)}
+            />
+            <h2>Text typed is: {text}</h2>
+        </section>
+    );
+};
+
+export default UseEffectExample;*/
