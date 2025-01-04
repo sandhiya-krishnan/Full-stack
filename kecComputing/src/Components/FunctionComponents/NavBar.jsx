@@ -16,6 +16,8 @@ const NavBar = () => {
                     <li><Link to="/UseEffect">UseEffect</Link></li>
                     <li><Link to="/usecontext">UseContext</Link></li>
                     <li><Link to="/usememo">UseMemo</Link></li>
+                    <li><Link to="/login">Login</Link></li>
+                    <li><Link to="/signup">Signup</Link></li>
                 </ul>
             </nav>
         </header>

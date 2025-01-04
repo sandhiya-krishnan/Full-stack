@@ -10,8 +10,9 @@ import UseContext from "./Components/FunctionComponents/UseContext";
 import ExamResults from './Components/FunctionComponents/UseContext';
 import UseMemo from "./Components/FunctionComponents/UseMemo";
 import Footer from "./Components/FunctionComponents/Footer";
+import Login from "./Components/FunctionComponents/Login";
+import Signup from "./Components/FunctionComponents/Signup";
 import {BrowserRouter,Routes,Route} from 'react-router-dom';
-
 function App() {
   return (
     <div>
@@ -27,6 +28,8 @@ function App() {
           <Route path="/usecontext" element = {<ExamResults />} />
           <Route path="/usememo" element = {<UseMemo />} />
           <Route path="/footer" element = {<Footer />} />
+          <Route path="/login" element = {<Login />} />
+          <Route path="/signup" element = {<Signup />} />
         </Routes>
       </BrowserRouter>
     </div>
