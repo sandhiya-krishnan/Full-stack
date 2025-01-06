@@ -9,7 +9,7 @@ function SignUpForm() {
   var navigate=useNavigate() 
   var signup = async(event) => {
   event.preventDefault()
-  var req= await axios.post("http://localhost:3001/signup",{
+  var req= await axios.post("http://localhost:300/signup",{
   firstName:firstName,
   lastName:lastName,
   email:email,
